@@ -12,7 +12,10 @@
       <div id="box"></div>
 
       <form onsubmit="handleClick(e)">
-        <input type="range" />
+        <input id="top-left" type="number" required="number" />
+        <input id="top-right" type="number" required="number" />
+        <input id="bottom-right" type="number" required="number" />
+        <input id="bottom-left" type="number" required="number" />
         <button onclick="handleClick(event)">submit</button>
       </form>
     </div>

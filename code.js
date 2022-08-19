@@ -10,11 +10,12 @@ function customBorderRadius(bordersRadius) {
 
 function handleClick(e) {
   e.preventDefault();
+
   const bordersRadius = {
-    topLeft: 20,
-    topRight: 3,
-    bottomRight: 40,
-    bottomLeft: 10,
+    topLeft: document.getElementById("top-left").value,
+    topRight: document.getElementById("top-right").value,
+    bottomRight: document.getElementById("bottom-right").value,
+    bottomLeft: document.getElementById("bottom-left").value,
   };
   customBorderRadius(bordersRadius);
 }
