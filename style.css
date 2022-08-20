@@ -11,6 +11,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 #box {
   height: 200px;
@@ -18,14 +19,21 @@ body {
   background-color: red;
 }
 
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+input[type="range"] {
+  position: absolute;
 }
-input[type="number"] {
-  -moz-appearance: textfield;
-  outline: none;
-  width: 20px;
-
+#top {
+  top: 20px;
+  left: 50%;
+}
+#right {
+  right: 0px;
+  rotate: 90deg;
+}
+#bottom {
+  bottom: 0px;
+}
+#left {
+  left: 0px;
+  rotate: 90deg;
 }

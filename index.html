@@ -11,12 +11,39 @@
     <div class="container">
       <div id="box"></div>
 
-      <form onsubmit="handleClick(e)">
-        <input id="top-left" type="number" required="number" />
-        <input id="top-right" type="number" required="number" />
-        <input id="bottom-right" type="number" required="number" />
-        <input id="bottom-left" type="number" required="number" />
-        <button onclick="handleClick(event)">submit</button>
+      <form class="form" onsubmit="handleClick(e)">
+        <input
+          id="left"
+          type="range"
+          oninput="handleClick(event)"
+          value="0"
+          min="0"
+          max="100"
+        />
+        <input
+          id="top"
+          type="range"
+          oninput="handleClick(event)"
+          value="0"
+          min="0"
+          max="100"
+        />
+        <input
+          id="right"
+          type="range"
+          oninput="handleClick(event)"
+          value="0"
+          min="0"
+          max="100"
+        />
+        <input
+          id="bottom"
+          type="range"
+          oninput="handleClick(event)"
+          value="0"
+          min="0"
+          max="100"
+        />
       </form>
     </div>
     <script src="/code.js"></script>
