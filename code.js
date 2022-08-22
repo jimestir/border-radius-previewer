@@ -1,11 +1,15 @@
 const box = document.getElementById("box");
+const printElement = document.querySelector(".print-element");
 
 function customBordersRadius(bordersRadius) {
   const { topLeft, topRight, bottomLeft, bottomRight } = bordersRadius;
-  box.style.borderTopLeftRadius = `${topLeft[0]}% ${topLeft[1]}%`;
-  box.style.borderTopRightRadius = `${topRight[0]}% ${topRight[1]}%`;
-  box.style.borderBottomRightRadius = `${bottomRight[0]}% ${bottomRight[1]}%`;
-  box.style.borderBottomLeftRadius = `${bottomLeft[0]}% ${bottomLeft[1]}%`;
+  const borderRadius = `${topLeft[0]}% ${topRight[0]}% ${bottomRight[0]}% ${bottomLeft[0]}% / ${topLeft[1]}% ${topRight[1]}% ${bottomRight[1]}% ${bottomLeft[1]}%`;
+  box.style.borderRadius = borderRadius;
+  writeToDOM(printElement, borderRadius);
+}
+
+function writeToDOM(element, content) {
+  element.innerHTML = `border-radius: ${content};`;
 }
 
 function handleClick(e) {
@@ -14,7 +18,7 @@ function handleClick(e) {
   const rangeRight = document.getElementById("right").value;
   const rangeBottom = document.getElementById("bottom").value;
   const rangeLeft = document.getElementById("left").value;
-
+  console.log({ rangeTop, rangeRight, rangeBottom, rangeLeft });
   const bordersRadius = {
     topLeft: [rangeTop, 100 - rangeLeft],
     topRight: [100 - rangeTop, rangeRight],

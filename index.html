@@ -9,19 +9,27 @@
   </head>
   <body>
     <div class="container">
-      <header class="header">
-        <h1 class="title">
-          <span>Generator</span>
-          <div>Border Radius Previewer</div>
-        </h1>
-      </header>
+      <div class="sub-container">
+        <header class="header">
+          <h1 class="title">
+            <span>Generator</span>
+            <div>Border Radius Previewer</div>
+          </h1>
+        </header>
+        <div class="sub-container--print-element">
+          <div class="print-element">
+            border-radius: 65% 35% 43% 57% / 33% 49% 51% 67%;
+          </div>
+          <button class="btn-copy">Copy</button>
+        </div>
+      </div>
       <div id="box">
         <form class="form" onsubmit="handleClick(e)">
           <input
             id="left"
             type="range"
             oninput="handleClick(event)"
-            value="40"
+            value="67"
             min="0"
             max="100"
           />
@@ -29,7 +37,7 @@
             id="top"
             type="range"
             oninput="handleClick(event)"
-            value="70"
+            value="65"
             min="0"
             max="100"
           />
@@ -37,7 +45,7 @@
             id="right"
             type="range"
             oninput="handleClick(event)"
-            value="40"
+            value="49"
             min="0"
             max="100"
           />
@@ -45,7 +53,7 @@
             id="bottom"
             type="range"
             oninput="handleClick(event)"
-            value="70"
+            value="57"
             min="0"
             max="100"
           />
