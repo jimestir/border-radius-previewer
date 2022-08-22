@@ -9,42 +9,48 @@
   </head>
   <body>
     <div class="container">
-      <div id="box"></div>
-
-      <form class="form" onsubmit="handleClick(e)">
-        <input
-          id="left"
-          type="range"
-          oninput="handleClick(event)"
-          value="0"
-          min="0"
-          max="100"
-        />
-        <input
-          id="top"
-          type="range"
-          oninput="handleClick(event)"
-          value="0"
-          min="0"
-          max="100"
-        />
-        <input
-          id="right"
-          type="range"
-          oninput="handleClick(event)"
-          value="0"
-          min="0"
-          max="100"
-        />
-        <input
-          id="bottom"
-          type="range"
-          oninput="handleClick(event)"
-          value="0"
-          min="0"
-          max="100"
-        />
-      </form>
+      <header class="header">
+        <h1 class="title">
+          <span>Generator</span>
+          <div>Border Radius Previewer</div>
+        </h1>
+      </header>
+      <div id="box">
+        <form class="form" onsubmit="handleClick(e)">
+          <input
+            id="left"
+            type="range"
+            oninput="handleClick(event)"
+            value="40"
+            min="0"
+            max="100"
+          />
+          <input
+            id="top"
+            type="range"
+            oninput="handleClick(event)"
+            value="70"
+            min="0"
+            max="100"
+          />
+          <input
+            id="right"
+            type="range"
+            oninput="handleClick(event)"
+            value="40"
+            min="0"
+            max="100"
+          />
+          <input
+            id="bottom"
+            type="range"
+            oninput="handleClick(event)"
+            value="70"
+            min="0"
+            max="100"
+          />
+        </form>
+      </div>
     </div>
     <script src="/code.js"></script>
   </body>
