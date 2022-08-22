@@ -10,13 +10,15 @@ body {
   display: flex;
   height: 100vh;
   justify-content: center;
-  margin: auto;
-  margin: auto;
   width: 100%;
 }
 @media (max-width: 1150px) {
   .container {
     flex-direction: column;
+    margin-top: 20px;
+  }
+  .sub-container--print-element {
+    margin-bottom: 50px;
   }
 }
 .sub-container {
@@ -53,7 +55,7 @@ h1 div {
 .sub-container--print-element {
   padding: 10px;
   height: 40px;
-   background-image: linear-gradient(
+  background-image: linear-gradient(
     to right,
     #ff8177 0%,
     #ff867a 0%,
@@ -71,8 +73,16 @@ h1 div {
   margin: auto;
   margin-right: 15px;
 }
-.btn {
-  
+.btn-copy {
+  background: #333333aa;
+  color: white;
+  border-radius: 15px;
+  border: none;
+  transition: background 0.3s;
+}
+.btn-copy:hover {
+  background: #333333;
+  transition: background 0.3s;
 }
 #box {
   background-color: #faaca8;
